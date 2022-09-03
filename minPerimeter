@@ -1,0 +1,16 @@
+
+function solution(N) {
+    
+    let side1 = side2 = 0;
+   //let minPerimeter = 0;
+    let i = Math.round(Math.sqrt(N));
+    for(i; i > 0; i--){
+        if(N%i==0){
+
+            side1 = i;
+            break;
+        }
+    }
+    side2 = N/side1;
+    return 2*(side1+side2)
+}
