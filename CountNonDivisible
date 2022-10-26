@@ -1,0 +1,19 @@
+function CountNonDivisible(myArray){
+    
+    console.log('Input Array',myArray)
+    var count = 0;
+    var newArray = [];
+    for(var i=0; i<myArray.len; i++){ // i=0
+        for(var j=0; j<myArray.len; j++){ // j=0, j=1, j=2
+            if(myArray[i]%myArray[j]!=0 && myArray[i]!=myArray[j]){ // 3/3=0, 3!==3, then no count | 3%3
+            count++;
+            console.log('Count the elememts',count);
+            }
+        }
+        myArray.push(count);
+    }
+    console.log(newArray);
+}
+
+const funcArr = [3,1,2,3,6]
+CountNonDivisible(funcArr);
